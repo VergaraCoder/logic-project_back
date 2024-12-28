@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { SubstractStringModule } from './substract_string/substract_string.module';
-import { ErrorModule } from './common/error/error.module';
 
 
 @Module({
-  imports: [SubstractStringModule, ErrorModule],
+  imports: [SubstractStringModule],
   controllers: [],
   providers: [],
 })

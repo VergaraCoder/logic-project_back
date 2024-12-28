@@ -9,26 +9,7 @@ export class InverseNumbersController {
 
   @Post()
   create(@Body() createInverseNumberDto: CreateInverseNumberDto) {
-    return this.inverseNumbersService.create(createInverseNumberDto);
+    return this.inverseNumbersService.create(createInverseNumberDto.number);
   }
 
-  @Get()
-  findAll() {
-    return this.inverseNumbersService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.inverseNumbersService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateInverseNumberDto: UpdateInverseNumberDto) {
-    return this.inverseNumbersService.update(+id, updateInverseNumberDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.inverseNumbersService.remove(+id);
-  }
 }
